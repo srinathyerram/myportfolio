@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of a DevOps Engineer specializing in Cloud, CI/CD, and Automation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <div class="logo">&lt;DevOps /&gt;</div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Srinath</h1>
+                <h2 class="hero-title">DevOps Engineer <span class="cursor">|</span></h2>
+                <p class="hero-description">Building robust pipelines, automating infrastructure, and scaling cloud
+                    systems.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code class="language-yaml">
+name: Deploy
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build & Push
+        run: |
+          echo "Building..."
+          docker build -t app .
+          docker push app:latest
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a passionate DevOps Engineer with a knack for automating the boring stuff. I bridge the
+                            gap between development and operations to ensure seamless delivery of high-quality software.
+                        </p>
+                        <p>With experience in AWS, Kubernetes, and CI/CD pipelines, I focus on reliability, scalability,
+                            and security.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Deployed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="devicon-docker-plain colored"></i>
+                        <h3>Docker</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-kubernetes-plain colored"></i>
+                        <h3>Kubernetes</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                        <h3>AWS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-jenkins-line colored"></i>
+                        <h3>Jenkins</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-terraform-plain colored"></i>
+                        <h3>Terraform</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="devicon-linux-plain"></i>
+                        <h3>Linux</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">K8s Cluster Autoscaler</h3>
+                            <p class="project-desc">Implemented a custom autoscaler for Kubernetes clusters on AWS to
+                                optimize cost and performance.</p>
+                            <div class="project-tags">
+                                <span class="tag">Go</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link">View Code</a>
+                                <a href="#" class="link">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">CI/CD Pipeline Template</h3>
+                            <p class="project-desc">A reusable GitHub Actions workflow library for microservices
+                                architecture.</p>
+                            <div class="project-tags">
+                                <span class="tag">GitHub Actions</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Infrastructure as Code</h3>
+                            <p class="project-desc">Complete infrastructure setup using Terraform for a
+                                high-availability web application.</p>
+                            <div class="project-tags">
+                                <span class="tag">Terraform</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">VPC</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="link">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <p class="contact-text">Interested in working together? Let's connect.</p>
+                    <a href="mailto:email@example.com" class="btn btn-primary">Say Hello</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Srinath. Built with code & coffee.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
